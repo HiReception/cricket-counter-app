@@ -1,0 +1,25 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    height: 100%;
+    user-select: none;
+}
+
+.number-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.number-display {
+    background: black;
+    color: white;
+    border-radius: 4px;
+    font-size: 24px;
+}
