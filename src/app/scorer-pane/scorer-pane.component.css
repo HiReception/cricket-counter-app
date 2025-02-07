@@ -5,6 +5,8 @@
     align-items: stretch;
     height: 100%;
     user-select: none;
+    background: var(--mat-sys-surface);
+    color: var(--mat-sys-on-surface);
 }
 
 .number-panel {
@@ -13,13 +15,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 16px;
     cursor: pointer;
 }
 
 .number-display {
-    background: black;
-    color: white;
+    background: var(--mat-sys-primary);
+    color: var(--mat-sys-on-primary);
     border-radius: 4px;
-    font-size: 24px;
+    font: var(--mat-sys-display-large);
+    padding: 8px;
+}
+
+.label {
+    font: var(--mat-sys-display-small);
+    text-transform: uppercase;
 }
