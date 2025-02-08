@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ScorerPaneComponent } from "./scorer-pane/scorer-pane.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ScorerPaneComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
