@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ScorerPaneComponent } from "./scorer-pane/scorer-pane.component";
+import { CounterPaneComponent } from "./counter-pane/counter-pane.component";
 
 @Component({
   selector: 'app-root',
-  imports: [ScorerPaneComponent],
+  imports: [CounterPaneComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'cricket-scorer-app';
+  title = "Doyle's Cricket Counter";
 }

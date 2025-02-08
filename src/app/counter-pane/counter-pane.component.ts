@@ -3,15 +3,15 @@ import { Component } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core'
 
 @Component({
-  selector: 'app-scorer-pane',
+  selector: 'app-counter-pane',
   imports: [
     DecimalPipe,
     MatRippleModule
   ],
-  templateUrl: './scorer-pane.component.html',
-  styleUrl: './scorer-pane.component.css'
+  templateUrl: './counter-pane.component.html',
+  styleUrl: './counter-pane.component.css'
 })
-export class ScorerPaneComponent {
+export class CounterPaneComponent {
   overCount: number = 0;
   ballCount: number = 0;
 

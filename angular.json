@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cricket-scorer-app": {
+    "cricket-counter-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/cricket-scorer-app",
+            "outputPath": "dist/cricket-counter-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "cricket-scorer-app:build:production"
+              "buildTarget": "cricket-counter-app:build:production"
             },
             "development": {
-              "buildTarget": "cricket-scorer-app:build:development"
+              "buildTarget": "cricket-counter-app:build:development"
             }
           },
           "defaultConfiguration": "development"

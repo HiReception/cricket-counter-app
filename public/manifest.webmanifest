@@ -1,6 +1,6 @@
 {
-  "name": "cricket-scorer-app",
-  "short_name": "cricket-scorer-app",
+  "name": "Doyle's Cricket Counter",
+  "short_name": "Cric. Counter",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
