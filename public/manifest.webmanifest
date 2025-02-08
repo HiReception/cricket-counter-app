@@ -1,11 +1,17 @@
 {
   "name": "Doyle's Cricket Counter",
-  "short_name": "Cric. Counter",
+  "short_name": "Cric Counter",
   "id": "cricket-counter-app",
   "theme_color": "#1976d2",
   "description": "A simple web app to keep track of balls bowled in a cricket match.",
   "background_color": "#fafafa",
   "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "browser"
+  ],
+  "handle_links": "preferred",
   "orientation": "any",
   "launch_handler": {
     "client_mode": ["focus-existing", "auto"]
