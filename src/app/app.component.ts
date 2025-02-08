@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { CounterPaneComponent } from "./counter-pane/counter-pane.component";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [CounterPaneComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
