@@ -1,0 +1,17 @@
+.settings-button {
+    position: absolute;
+}
+
+.settings-button.bottom-left {
+    left: 12px;
+    bottom: 12px;
+}
+
+.settings-button.bottom-right {
+    right: 12px;
+    bottom: 12px;
+}
+
+.settings-menu {
+    color: var(--mat-sys-on-surface);
+}

@@ -1,0 +1,15 @@
+<button mat-fab [matMenuTriggerFor]="menu" class="settings-button" [class]="localStorageService.settings().settingsButtonPosition">
+    <mat-icon>settings</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu" class="settings-menu">
+    <div class="settings-menu">
+        <div id="settings_buttonposition">
+            <div class="settings-label" id="label_buttonposition">Settings Button Position</div>
+            <mat-radio-group aria-labelledby="label_buttonposition" [(ngModel)]="localStorageService.settings().settingsButtonPosition" (ngModelChange)="updateSettings('settingsButtonPosition', $event)">
+                <mat-radio-button value="bottom-left">Bottom Left</mat-radio-button>
+                <mat-radio-button value="bottom-right">Bottom Right</mat-radio-button>
+            </mat-radio-group>
+        </div>
+    </div>
+</mat-menu>
