@@ -1,6 +1,7 @@
 import { DecimalPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core'
+import { LocalStorageService } from '../local-storage.service';
 
 @Component({
   selector: 'app-counter-pane',
@@ -14,6 +15,8 @@ import { MatRippleModule } from '@angular/material/core'
 export class CounterPaneComponent {
   overCount: number = 0;
   ballCount: number = 0;
+
+  localStorageService = inject(LocalStorageService);
 
   incrementOvers() {
     this.overCount++;
