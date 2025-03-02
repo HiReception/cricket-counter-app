@@ -14,6 +14,9 @@ export class LocalStorageService {
 
   settings: WritableSignal<Settings>;
 
+  overCount: WritableSignal<number>;
+  ballCount: WritableSignal<number>
+
   
 
   syncSettings = effect(() => {
@@ -38,5 +41,8 @@ export class LocalStorageService {
     };
 
     this.settings = signal<Settings>(fullStartingSettings);
+
+    this.overCount = signal<number>(0);
+    this.ballCount = signal<number>(0);
   }
 }

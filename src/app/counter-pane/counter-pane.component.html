@@ -1,6 +1,6 @@
 <div class="number-panel overs" matRipple (click)="incrementOvers()">
     <div class="number-display">
-        {{ overCount | number: '2.0-0' }}
+        {{ overCount() | number: '2.0-0' }}
     </div>
     <div class="label">
         Overs
@@ -9,7 +9,7 @@
 
 <div class="number-panel balls" matRipple (click)="incrementBalls()">
     <div class="number-display">
-        {{ ballCount | number: '1.0-0' }}
+        {{ ballCount() | number: '1.0-0' }}
     </div>
     <div class="label">
         Balls

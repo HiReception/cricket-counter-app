@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatRadioModule } from '@angular/material/radio';
 import { LocalStorageService } from '../local-storage.service';
@@ -16,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
   ],
   templateUrl: './settings-button.component.html',
-  styleUrl: './settings-button.component.css'
+  styleUrl: './settings-button.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SettingsButtonComponent {
   localStorageService = inject(LocalStorageService);

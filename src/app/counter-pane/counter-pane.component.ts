@@ -1,5 +1,5 @@
 import { DecimalPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatRippleModule } from '@angular/material/core'
 import { LocalStorageService } from '../local-storage.service';
 
@@ -10,20 +10,22 @@ import { LocalStorageService } from '../local-storage.service';
     MatRippleModule
   ],
   templateUrl: './counter-pane.component.html',
-  styleUrl: './counter-pane.component.css'
+  styleUrl: './counter-pane.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CounterPaneComponent {
-  overCount: number = 0;
-  ballCount: number = 0;
 
   localStorageService = inject(LocalStorageService);
 
+  overCount = this.localStorageService.overCount;
+  ballCount = this.localStorageService.ballCount;
+
   incrementOvers() {
-    this.overCount++;
-    this.ballCount = 0;
+    this.overCount.update(prev => prev + 1);
+    this.ballCount.set(0);
   }
 
   incrementBalls() {
-    this.ballCount++;
+    this.ballCount.update(prev => prev + 1);
   }
 }
