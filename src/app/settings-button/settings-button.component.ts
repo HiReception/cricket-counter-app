@@ -29,4 +29,9 @@ export class SettingsButtonComponent {
       [key]: value
     })
   }
+
+  resetCounts() {
+    this.localStorageService.ballCount.set(0);
+    this.localStorageService.overCount.set(0);
+  }
 }

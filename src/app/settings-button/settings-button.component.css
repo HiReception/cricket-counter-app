@@ -14,4 +14,9 @@
 
 .settings-menu {
     color: var(--mat-sys-on-surface);
+    padding: 12px;
+
+    button {
+        width: 100%;
+    }
 }
