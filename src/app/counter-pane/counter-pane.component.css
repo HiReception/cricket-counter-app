@@ -17,6 +17,10 @@
     align-items: center;
     gap: 16px;
     cursor: pointer;
+
+    &:focus-visible {
+        background: var(--mat-sys-surface-variant);
+    }
 }
 
 .number-display {

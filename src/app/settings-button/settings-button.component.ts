@@ -22,7 +22,7 @@ import { FormsModule } from '@angular/forms';
 export class SettingsButtonComponent {
   localStorageService = inject(LocalStorageService);
 
-  updateSettings(key: string, value: any) {
+  updateSettings(key: string, value: unknown) {
     const existingSettings = this.localStorageService.settings();
     this.localStorageService.settings.set({
       ...existingSettings,

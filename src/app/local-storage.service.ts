@@ -1,4 +1,4 @@
-import { effect, Inject, Injectable, PLATFORM_ID, signal, WritableSignal } from '@angular/core';
+import { effect, inject, Injectable, PLATFORM_ID, signal, WritableSignal } from '@angular/core';
 import { Settings } from './settings.model';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -15,7 +15,9 @@ export class LocalStorageService {
   settings: WritableSignal<Settings>;
 
   overCount: WritableSignal<number>;
-  ballCount: WritableSignal<number>
+  ballCount: WritableSignal<number>;
+
+  platformId = inject(PLATFORM_ID);
 
   
 
@@ -26,10 +28,8 @@ export class LocalStorageService {
   });
 
   
-  constructor(
-    @Inject(PLATFORM_ID) platformId: object,
-  ) {
-    this.browserMode = isPlatformBrowser(platformId);
+  constructor() {
+    this.browserMode = isPlatformBrowser(this.platformId);
 
     // get any settings currently stored locally
     const startingLocalSettings = this.browserMode ? JSON.parse(localStorage?.getItem('settings') || "{}") : {};
