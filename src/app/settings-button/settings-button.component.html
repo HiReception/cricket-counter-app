@@ -1,9 +1,12 @@
+<!-- Settings Button -->
 <button mat-fab [matMenuTriggerFor]="menu" class="settings-button" [class]="localStorageService.settings().settingsButtonPosition">
     <mat-icon aria-hidden="false" aria-label="Settings">settings</mat-icon>
 </button>
 
+<!-- Settings Menu -->
 <mat-menu #menu="matMenu" class="settings-menu">
     <div class="settings-menu">
+        <!-- Settings Button Position setting -->
         <div id="settings_buttonposition">
             <div class="settings-label" id="label_buttonposition">Settings Button Position</div>
             <mat-radio-group aria-labelledby="label_buttonposition" [(ngModel)]="localStorageService.settings().settingsButtonPosition" (ngModelChange)="updateSettings('settingsButtonPosition', $event)">
@@ -11,6 +14,8 @@
                 <mat-radio-button value="bottom-right">Bottom Right</mat-radio-button>
             </mat-radio-group>
         </div>
+
+        <!-- Reset button -->
         <div id="settings_reset">
             <div class="settings-label" id="label_reset">Reset Counts</div>
             <button mat-flat-button (click)="resetCounts()">Reset</button>
