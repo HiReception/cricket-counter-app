@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SettingsButtonComponent } from "./settings-button/settings-button.component";
 
@@ -9,6 +9,7 @@ import { SettingsButtonComponent } from "./settings-button/settings-button.compo
     SettingsButtonComponent
 ],
   templateUrl: './app.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './app.component.css'
 })
 export class AppComponent {
