@@ -4,6 +4,7 @@ import express from 'express';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import bootstrap from './main.server';
+import compression from 'compression';
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
@@ -13,6 +14,9 @@ const app = express();
 const commonEngine = new CommonEngine({
   allowedHosts: ['localhost', 'cricket-counter-app--cricket-scorer-44409.asia-east1.hosted.app/', '*.mtdoyle.com']
 });
+
+// compress all responses
+app.use(compression());
 
 /**
  * Example Express Rest API endpoints can be defined here.
